@@ -1,0 +1,160 @@
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .search{
+        width: 300px;
+    }
+
+    .intro h1{
+        font-size: 2.2rem;
+    }
+
+    .card{
+       border-radius: 30px;
+    }
+
+
+    .movie-card {
+        flex: 0 0 auto; /* Prevent shrinking */
+        width: 200px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: center;
+        height: 300px;
+        margin-top: 20px;
+      }
+      
+      .movie-card img {
+        width: 100%;
+        height: 330px;
+        object-fit: cover;
+      }
+      
+      .movie-card h3 {
+        font-size: 16px;
+        margin: 10px 0;
+        font-weight: bold;
+        color: #e9e9e9;
+      }
+    
+    
+      .movie-list{
+        padding: 30px;
+        height: 500px;
+        background-color: #f3f3f3;
+    
+      }
+
+
+      .content h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
+      
+      .content p {
+        font-size: 0.7rem;
+        margin-top: 10px;
+      }
+      
+ 
+      .ad-container {
+      
+        font-size: 10px;
+       
+      }
+
+      button {
+      
+        font-size: 12px;
+        border-radius: 25px !important;
+      }
+
+      .apple-tv-section {
+       
+        height: 300px;
+        overflow: hidden;
+        width: 100%;
+        background-color: #0d0d0d;
+        
+    }
+    
+    .apple-tv-section video {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        z-index: -1000;
+    }
+    
+    .apple-tv-content h2{
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+
+  .apple-tv-content p{
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+
+
+  
+.cast-section{
+  padding: 50px;
+ display: none;
+}
+
+
+.footer .footer-logo {
+  width: 100px;
+}
+
+.footer h5 {
+  text-align: center;
+}
+
+.footer a {
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer .bi {
+  font-size: 20px;
+  text-align: center;
+}
+.list-unstyled{
+  text-align: center;
+}
+ 
+}

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>ithink.com</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/RP.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+ 
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="/img/Apple-Logo.jpg" alt="Logo" style="height: 30px; margin-right: 10px;">
+                    Goomi.com
+                </a>
+            </div>
+           
+            <div class="buttons">
+                <a href="#" class="btn">Add Card</a>
+                <a href="#" class="btn-primary">Submit</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    
+
+        <section class="gpt-store">
+            <div class="container">
+                <div class="intro">
+                    <span class="early-access">Join the early access</span><br><br>
+                    <h1>Explore Best Movies <br>on Goomi Store</h1>
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder="Search GPTs">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <p>Trending: academic research, coding, image generation, marketing ...</p>
+                </div>
+                <div class="gpt-cards" id="gptCards">
+                    <div class="card" data-title="Nomad List">
+                        <img src="img/unnamed.jpg" alt="Profile">
+                        <h3>Hulu</h3>
+                        <p>Customizable AI for enhanced financial insights and learning.</p>
+                        <span>4.3</span>
+
+                        <i class="bi bi-trash delete-icon" title="Delete"></i>
+                    </div>
+                    <div class="card" data-title="DALL +">
+                        <img src="/img/images.png" alt="Profile">
+                        <h3>Netflix</h3>
+                        <p>Image generator with simple settings, able to better depict for your imagine.</p>
+                        <span>4.1</span>
+                        <i class="bi bi-trash delete-icon" title="Delete"></i>
+                    </div>
+                    <div class="card" data-title="Job Match">
+                        <img src="/img/AppleTVLogo.svg.png" alt="Profile">
+                        <h3>Apple TV</h3>
+                        <p>Find the best-fit jobs for you by matching their criteria.</p>
+                        <span>4.2</span>
+                        <i class="bi bi-trash delete-icon" title="Delete"></i>
+                    </div>
+                    <div class="card" data-title="Code Tutor">
+                        <img src="/img/colourful-google-logo-on-white-background-free-vector.jpg" alt="Profile">
+                        <h3>Google </h3>
+                        <p>I won't write the code for you, but I'll help you work things out.</p>
+                        <span>4.4</span>
+                        <i class="bi bi-trash delete-icon" title="Delete"></i>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Request Ad Form Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+    <div class="form-container" id="formContainer">
+        <h2>Add Your Card</h2>
+        <form id="adForm">
+            <label for="profilePic">Profile Picture:</label>
+             <input type="file" id="profilePic" accept="image/*" required>
+
+
+            <label for="name">Name (Title):</label>
+            <input type="text" id="name" placeholder="Enter title name" required>
+
+            <label for="thoughts">What are you thinking?</label>
+            <textarea id="thoughts" placeholder="Share your thoughts" rows="4" required></textarea>
+
+            <button type="submit" class="btn primary">Submit</button>
+            <button type="button" class="btn cancel" id="closeModal">Cancel</button>
+        </form>
+    </div>
+</div>
+
+        </section>
+
+
+
+   
+
+
+    <div class="movie-list">
+      <h2 class="section-title">Top Movies</h2>
+      <div class="scroll-container">
+        <div class="movie-card">
+          <div class="badge">New</div>
+          <img src="/img/what-has-happened-to-movie-posters-v0-veyma8wnnhb81.webp" alt="Movie 1">
+          <div class="card-info">
+            <h3>Dune 2022</h3>
+            
+          </div>
+          
+        </div>
+        <div class="movie-card">
+          <div class="badge">New</div>
+          
+          <img src="/img/021ec3ddb2788952bbd6919911c0918c.jpg" alt="Movie 2">
+          <div class="card-info">
+          <h3>Alien 2024</h3></div>
+        </div>
+        <div class="movie-card">
+          <div class="badge2"><i class="bi bi-star-fill"></i></div>
+          <img src="/img/iMCDizpWmNedG3iJRZGlQB5xZMo.jpg" alt="Movie 3">
+          <div class="card-info">
+          <h3>Superbad</h3></div>
+        </div>
+        <div class="movie-card">
+          <div class="badge">New</div>
+          <img src="/img/jungle-movie-poster-md.jpg" alt="Movie 4">
+          <div class="card-info">
+          <h3>The jungle</h3></div>
+        </div>
+        <div class="movie-card">
+          <div class="badge">New</div>
+          <img src="/img/unnamed (11).jpg" alt="Movie 5">
+          <div class="card-info">
+          <h3>Under water</h3></div>
+        </div>
+        <div class="movie-card">
+          <img src="/img/4THb6hDOftZVILFWy1Cg8bjNAEg.jpg" alt="Movie 1">
+          <div class="card-info">
+          <h3>Top Gun</h3></div>
+        </div>
+        <div class="movie-card">
+          <img src="/img/download (15).jpeg" alt="Movie 1">
+          <div class="card-info">
+          <h3>5th Wave</h3></div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+ <!-- Chat button -->
+ <button class="chat-button">
+    <i class="bi bi-chat"></i>
+  </button>
+
+
+
+
+     <!-- Apple TV Section -->
+     <section class="apple-tv-section">
+      <!-- Background Video -->
+      <video autoplay muted loop>
+          <source src="/img/from-season-1-trailer-rotten-tomatoes-tv-1080-publer.io.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  
+      <!-- Centered Content -->
+      <div class="apple-tv-content">
+          <h2>Now On Apple TV</h2>
+          <p>Experience the best in entertainment with Apple TV.</p>
+          <button class="primary">Learn More</button>
+      </div>
+  
+      <!-- Sound Control Button -->
+      <button class="sound-btn" id="soundToggle">
+          <i class="bi bi-volume-up"></i> <!-- Bootstrap Icon for volume -->
+      </button>
+  </section>
+  
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ <div class="cast-section">
+ 
+  <div class="cast">
+    <h3 class="top"><span class="i">.</span> Top Actors</h3>
+    <div class="profiles-container">
+      <div class="profile-card">
+       
+        <img src="/img/d.jpeg" alt="Actor 1" class="profile-img">
+        <h2 class="actor-name">washington</h2>
+        <span class="verified-badge">✔ certified</span>
+        <p class="professions">Actor, Producer</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d2.jpeg" alt="Actor 2" class="profile-img">
+        <h2 class="actor-name">Edward Norton </h2>
+        <p class="professions">Actor, Director</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d3.jpeg" alt="Actor 3" class="profile-img">
+        <h2 class="actor-name">jake gyllenhaal </h2>
+        <span class="verified-badge">✔ certified</span>
+        <p class="professions">Actor, Screenwriter</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d4jpeg.jpeg" alt="Actor 4" class="profile-img">
+        <h2 class="actor-name">samuel jackson</h2>
+        <p class="professions">Actor, Filmmaker</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d5.jpeg" alt="Actor 5" class="profile-img">
+        <h2 class="actor-name">brad pitt</h2>
+        <p class="professions">Actor, Producer</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d7jpeg.jpeg" alt="Actor 6" class="profile-img">
+        <h2 class="actor-name">mark wahlberg </h2>
+        <p class="professions">Actor, Director</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d9.peg.jpeg" alt="Actor 7" class="profile-img">
+        <h2 class="actor-name">matt demon</h2>
+        <span class="verified-badge">✔ certified</span>
+        <p class="professions">Actor, Writer</p>
+      </div>
+      <div class="profile-card">
+        <img src="/img/d10.jpeg" alt="Actor 8" class="profile-img">
+        <h2 class="actor-name">Tom hardy</h2>
+        <p class="professions">Actor, Producer</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<div class="m">
+  <div class="container my-4">
+    
+    <div class="movie-list5 d-flex flex-column align-items-center">
+      <!-- Movie Cards -->
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/Training day.jpeg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1">Training day</h5>
+          <p class="movie-year mb-1">2001 ‧ Thriller/Crime ‧ 2h 2m </p>
+          <div class="movie-rating1">
+           
+          </div>
+        </div>
+      </div>
+      <!-- Repeat Movie Cards -->
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/80734465e94f48f0fda4df02076fa1fe.jpg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1">American History x</h5>
+          <p class="movie-year mb-1"> 1998 ‧ Crime/Crime ‧ 1h 59m
+          </p>
+          <div class="movie-rating1">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-muted"></i>
+            <i class="bi bi-star text-muted"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Add more cards here -->
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/c0feb66def0578a1e0f35d54ce6c7527.jpg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1">Prisoners</h5>
+          <p class="movie-year mb-1">2013 ‧ Thriller/Crime ‧ 2h 33m
+          </p>
+          <div class="movie-rating1">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-muted"></i>
+            <i class="bi bi-star text-muted"></i>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/42c12ea55c5768c055dae19367798425.jpg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1">Menace to socity</h5>
+          <p class="movie-year mb-1">1993 ‧ Crime/Thriller ‧ 1h 37m</p>
+          <div class="movie-rating1">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-muted"></i>
+            <i class="bi bi-star text-muted"></i>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/d89eb04d03c62acb1d463d50db4560ce.jpg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1"> Fight Club</h5>
+          <p class="movie-year mb-1">
+            1999 ‧ Action/Thriller ‧ 2h 19m</p>
+          <div class="movie-rating1">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-muted"></i>
+            <i class="bi bi-star text-muted"></i>
+          </div>
+        </div>
+      </div>
+      <div class="movie-card2 d-flex">
+        <img src="/img/cast/10581e07f8b4cb94f6a7e9d9bfc86ab1.jpg" alt="Movie Poster" class="movie-img1">
+        <div class="movie-info1 ms-3">
+          <h5 class="movie-title1 mb-1">
+            Good Will Hunting
+            </h5>
+          <p class="movie-year mb-1">1997 ‧ Romance/Drama ‧ 2h 6m</p>
+          <div class="movie-rating1">
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star-fill text-warning"></i>
+            <i class="bi bi-star text-muted"></i>
+            <i class="bi bi-star text-muted"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+
+ 
+
+      
+ 
+ 
+ <div class="ad-container" id="adContainer">
+  <div class="ad-content">
+    <p>Exclusive Offer! Get 20% off on your next purchase. Hurry🎉, limited time offer!</p>
+    <button onclick="closeAd()">Close</button>
+  </div>
+
+</div>
+ 
+ 
+
+<section class="film-section">
+  <h2 class="section-title">Top Sifi Movies</h2>
+  <div class="scroll-container">
+    <div class="movie-card" >
+      <div class="badge">New</div>
+      <a href="https://youtu.be/a6O30nJ02PU?si=_G9mWaq8eB6_Krgg"> <img src="/img/Fantasy Island (2020).jpeg" alt="Movie 1" >></a>
+      <div class="card-info">
+        <h3>Fantasy island</h3>
+        <span class="verified-badge1">✔ Rating 6.5</span>
+      </div>
+      
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      
+      <img src="/img/The Silence.jpeg" alt="Movie 2">
+      <div class="card-info">
+      <h3>The silance</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge2"><i class="bi bi-star-fill"></i></div>
+      <img src="/img/bf2a7b37-fdbd-45df-9d08-9d57e76ff4bf.jpeg" alt="Movie 3">
+      <div class="card-info">
+      <h3>Trangle</h3>
+      <span class="verified-badge1">✔ Rating 7.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      <img src="/img/download (12).jpeg" alt="Movie 4">
+      <div class="card-info">
+      <h3>Troll</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      <img src="/img/download (13).jpeg" alt="Movie 5">
+      <div class="card-info">
+      <h3>Hunting tropies</h3>
+      <span class="verified-badge1">not rated</span></div>
+    </div>
+    <div class="movie-card">
+      <img src="/img/download (14).jpeg" alt="Movie 1">
+      <div class="card-info">
+      <h3>Freaks</h3>
+      <span class="verified-badge1">✔ Rating 7.0</span></div>
+    </div>
+    <div class="movie-card">
+      <img src="/img/RİTUAL.jpeg" alt="Movie 1">
+      <div class="card-info">
+      <h3>The ritual</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+  </div>
+</section>
+ 
+
+
+
+
+
+
+<hr style="width: 80%; align-self: center; margin: auto;">
+
+
+<section class="film-section">
+  <h2 class="section-title">Top crime Movies</h2>
+  <div class="scroll-container">
+    <div class="movie-card" >
+      <div class="badge">New</div>
+      <a href="https://youtu.be/a6O30nJ02PU?si=_G9mWaq8eB6_Krgg"> <img src="/img/Fantasy Island (2020).jpeg" alt="Movie 1" >></a>
+      <div class="card-info">
+        <h3>Fantasy island</h3>
+        <span class="verified-badge1">✔ Rating 6.5</span>
+      </div>
+      
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      
+      <img src="/img/The Silence.jpeg" alt="Movie 2">
+      <div class="card-info">
+      <h3>The silance</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge2"><i class="bi bi-star-fill"></i></div>
+      <img src="/img/bf2a7b37-fdbd-45df-9d08-9d57e76ff4bf.jpeg" alt="Movie 3">
+      <div class="card-info">
+      <h3>Trangle</h3>
+      <span class="verified-badge1">✔ Rating 7.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      <img src="/img/download (12).jpeg" alt="Movie 4">
+      <div class="card-info">
+      <h3>Troll</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+    <div class="movie-card">
+      <div class="badge">New</div>
+      <img src="/img/download (13).jpeg" alt="Movie 5">
+      <div class="card-info">
+      <h3>Hunting tropies</h3>
+      <span class="verified-badge1">not rated</span></div>
+    </div>
+    <div class="movie-card">
+      <img src="/img/download (14).jpeg" alt="Movie 1">
+      <div class="card-info">
+      <h3>Freaks</h3>
+      <span class="verified-badge1">✔ Rating 7.0</span></div>
+    </div>
+    <div class="movie-card">
+      <img src="/img/RİTUAL.jpeg" alt="Movie 1">
+      <div class="card-info">
+      <h3>The ritual</h3>
+      <span class="verified-badge1">✔ Rating 6.5</span></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer mt-auto py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Logo Section -->
+      <div class="col-md-3 mb-3 text-center text-md-start">
+        <a href="#" class="navbar-brand text-light">
+          <img src="/img/white-hd-google-logo-701751694791445gkogomqqwr-removebg-preview.png" alt="IMDb Logo" class="footer-logo">
+        </a>
+        <p class="mt" style="color: white;">© 2024 IMDb Inc.</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="col-md-3 mb-3">
+        <h5 class="text-light">Explore</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-muted">Home</a></li>
+          <li><a href="#" class="text-muted">Top Movies</a></li>
+          <li><a href="#" class="text-muted">TV Shows</a></li>
+          <li><a href="#" class="text-muted">Celebrities</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <h5 class="text-light">Help</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-muted">Contact Us</a></li>
+          <li><a href="#" class="text-muted">Support</a></li>
+          <li><a href="#" class="text-muted">FAQs</a></li>
+          <li><a href="#" class="text-muted">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="col-md-3 mb-3 text-center text-md-end">
+        <h5 class="text-light">Follow Us</h5>
+        <div class="d-flex justify-content-center justify-content-md-end gap-3">
+          <a href="#" class="text-muted"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="text-muted"><i class="bi bi-twitter fs-4"></i></a>
+          <a href="#" class="text-muted"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="text-muted"><i class="bi bi-youtube fs-4"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4 text-muted">
+      <small class="small">IMDb is a registered trademark of IMDb Inc.</small>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const video = document.querySelector('video');
+  const soundBtn = document.getElementById('soundToggle');
+
+  soundBtn.addEventListener('click', function () {
+      if (video.muted) {
+          video.muted = false;
+          soundBtn.innerHTML = '<i class="bi bi-volume-up"></i>'; // Volume on icon
+      } else {
+          video.muted = true;
+          soundBtn.innerHTML = '<i class="bi bi-volume-mute"></i>'; // Volume off icon
+      }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  window.onload = function() {
+    // Show the ad container after the page is loaded
+    setTimeout(function() {
+      document.getElementById('adContainer').style.bottom = '0';
+    }, 1000); // Ad will appear 1 second after page load
+  };
+  
+  function closeAd() {
+    document.getElementById('adContainer').style.bottom = '-100px'; // Hide the ad by moving it below the screen
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script> 
+    <script src="/scripts.js"></script>
+       
+    </body>
+    </html>
